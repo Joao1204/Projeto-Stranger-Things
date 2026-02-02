@@ -1,0 +1,504 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Benguiat";
+  src: url("fontes/Benguiat\ Bold.ttf");
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+#preloader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 20vw;
+    height: auto;
+
+    path {
+      fill: rgba(168, 19, 19, 0.3);
+      stroke: rgb(255, 0, 0);
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      /* stroke-width: 5px; */
+    }
+  }
+}
+
+body {
+  background-color: rgba(12, 1, 2, 1);
+  color: rgb(255, 255, 255, 0.9);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  padding: 12px 0;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  position: absolute;
+  z-index: 9;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+section {
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+.secao_1 {
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 16/9;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7vw 18vw 7vw;
+  position: relative;
+
+  picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+  }
+
+  .esquerda_e_direita_secao_1 {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    z-index: 3;
+  }
+}
+
+.secao_1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0.3) 60%, rgb(12, 1, 2) 100%);
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+.esquerda_secao_1 {
+  width: 30%;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 12px;
+  }
+
+  h1 {
+    font-size: 3.7vw;
+    font-family: "Benguiat";
+  }
+}
+
+.direita_secao_1 {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  p {
+    font-size: 1.6vw;
+    margin-bottom: 12px;
+    text-align: end;
+  }
+}
+
+.bgMonstro {
+  background-image: url("imagens/bg-sec2.webp");
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+  background-color: rgb(12, 1, 2);
+}
+
+.secao_2 {
+  flex-direction: column;
+  position: relative;
+
+  .titulo_e_botao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 400;
+    }
+  }
+
+  .cards_cidades {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      background-image: url("imagens/card1.webp");
+      width: 32%;
+      aspect-ratio: 16/9;
+      background-size: cover;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      padding: 12px;
+
+      h3,
+      p {
+        font-size: 1vw;
+      }
+    }
+
+    .card:nth-child(2) {
+      background-image: url("imagens/card2.webp");
+    }
+
+    .card:nth-child(3) {
+      background-image: url("imagens/card3.webp");
+    }
+  }
+}
+
+.secao_3 {
+  flex-direction: column;
+
+  .logotipos {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .depoimentos {
+    margin-top: 24vh;
+    display: flex;
+    justify-content: space-between;
+
+    .depoimento {
+      width: 32%;
+    }
+  }
+}
+
+.secao_4 {
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: rgb(12, 1, 2);
+  z-index: 2;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+footer {
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("imagens/bg-footer3.webp");
+  background-size: cover;
+  background-position: center;
+
+  .conteudoFooter {
+    display: flex;
+    width: 100%;
+    padding: 7vw;
+
+    .logoFooter {
+      width: 30%;
+
+      h3 {
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 12px;
+      }
+
+      h2 {
+        font-size: 3.7vw;
+        font-family: "Benguiat";
+      }
+    }
+
+    .secoesFooter {
+      display: flex;
+      flex: 1;
+      justify-content: end;
+      gap: 6%;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .redesSociais {
+
+        ul {
+          list-style-type: none;
+          display: flex;
+          gap: 12px;
+        }
+      }
+
+      .institucional {
+
+        ul {
+          list-style-type: none;
+        }
+      }
+    }
+  }
+
+  .logotiposFooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw;
+  }
+
+  .textoInfinito {
+    width: max-content;
+    display: flex;
+
+    h3 {
+      font-size: 12vw;
+      font-family: "Benguiat", sans-serif;
+      mix-blend-mode: color-dodge;
+      color: rgb(199, 199, 199);
+      animation: textoInfinito 12s infinite linear;
+      padding-left: 12vw;
+    }
+  }
+}
+
+@keyframes textoInfinito {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  header h2 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 4vw;
+  }
+
+  .secao_1 {
+    flex-direction: column;
+    padding: 15% 4vw 0;
+
+
+    .esquerda_secao_1,
+    .direita_secao_1 {
+      width: 100%;
+    }
+
+    .esquerda_e_direita_secao_1 {
+      display: flex;
+      flex-direction: column;
+      gap: 50vh;
+      padding-top: 2vh;
+    }
+
+    .esquerda_secao_1 {
+      /* margin-bottom: 40vw; */
+
+      h3,
+      h1 {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 12vw;
+      }
+
+      h3 {
+        font-size: 4vw;
+      }
+    }
+
+    .direita_secao_1 {
+      align-items: start;
+
+      p {
+        font-size: 4vw;
+        text-align: start;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .secao_2 {
+    margin-top: 80px;
+
+    button {
+      display: none;
+    }
+
+    .cards_cidades {
+      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
+
+      .card {
+        width: 100%;
+
+        h3,
+        p {
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+
+  .secao_3 {
+    margin-top: 8vh;
+
+    .logotipos {
+
+      img:nth-child(1),
+      img:nth-child(3) {
+        width: 20%;
+      }
+
+      img:nth-child(2) {
+        width: 40%;
+      }
+    }
+
+    .depoimentos {
+      margin-top: 12vh;
+      flex-direction: column;
+      gap: 48px;
+
+      .depoimento {
+        width: 100%;
+      }
+    }
+  }
+
+  .secao_4 {
+    margin: 60px 0px 60px;
+
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      width: max-content;
+      gap: 32px;
+    }
+  }
+
+  footer {
+    .conteudoFooter {
+      padding: 4vw;
+      flex-direction: column;
+
+      .logoFooter {
+        width: 100%;
+
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 12vw;
+        }
+      }
+
+      .secoesFooter {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .redesSociais {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 40px 0px 40px;
+        }
+      }
+    }
+
+    .logotiposFooter {
+      margin-top: 40px;
+
+      img:nth-child(1),
+      img:nth-child(2) {
+        width: 20%;
+      }
+    }
+
+    .textoInfinito h3 {
+      font-size: 24vw;
+    }
+  }
+}
