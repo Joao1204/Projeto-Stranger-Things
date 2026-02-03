@@ -9,12 +9,12 @@ function animarPagina() {
   // ANIMAÇÕES SECAO_1
 gsap.from(".secao_1", {
   opacity: 0,
-  duration: 1
+  duration: 2
 });
 
 gsap.from("picture:nth-child(2)", {
   y: 60,
-  duration: 1
+  duration: 2
 });
 
 gsap.from("picture:nth-child(1)", {
@@ -118,21 +118,21 @@ tl.to("#preloader path", {
   strokeDashoffset: 0,
 });
 
-// Efeito de "engolir a tela"
-tl.to("#preloader", {
-  scale: 20,
-  duration: 1,
-  ease: "power1.in",
-  transformOrigin: "50% 50%",
-});
+// // Efeito de "engolir a tela"
+// tl.to("#preloader", {
+//   scale: 20,
+//   duration: 1,
+//   ease: "power1.in",
+//   transformOrigin: "50% 50%",
+// });
 
 // Some com ele
-tl.to("#preloader", {
-  opacity: 0,
-  duration: 0,
-  onComplete() {
-    gsap.set("#preloader", {
-      display: "none"
-    });
-  }
-});
+// tl.to("#preloader", {
+//   opacity: 0,
+//   duration: 0,
+//   onComplete() {
+//     gsap.set("#preloader", {
+//       display: "none"
+//     });
+//   }
+// });
